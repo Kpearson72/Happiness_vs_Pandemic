@@ -1,14 +1,3 @@
-// var myMap = L.map('map').setView([40.573883587770304, -3.873485396773201], 3);
-
-
-// let geoData = "data/world_hap.json";
-
-// function markerSize(sumOfNewDeaths) {
-//     return sumOfNewDeaths * 50;
-// }
-
-
-
 let happinessDataSample = [
     {
         country: 'Afghanistan',
@@ -92,22 +81,22 @@ function createMap() {
         layers: [streetmap, score, deaths] 
     });
 
-
+    //Add the death and happiness score layers
     L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap);
 
     for (var i = 0; i < happinessDataSample.length; i++) {
             var coordinates = happinessDataSample[i]['coordinates']
-            var happinessRating = happinessDataSample[i]['happiness_score']
+            var happinessRating = parseFloat((happinessDataSample[i]['happiness_score'])).toFixed(1)
             var coData = []
             coData.push(L.circle([happinessDataSample[i].coordinates[0], happinessDataSample[i].coordinates[1]], {
                 stroke: true,
                 color: "red",
                 weight: 0,
                 radius: happyMarkerSize(happinessRating)
-            }).bindPopup(`<h1> ${coordinates}</h1><br>
-            <h1> Happiness Score: ${happinessRating}</h1>`)
+            }).bindPopup(L.popup({maxWidth:150, maxHeight: 300}).setContent(`<h1> ${coordinates}</h1><br>
+            <h1> Happiness Score: ${happinessRating}</h1>`))
             .addTo(score))
         }
 
@@ -120,25 +109,9 @@ function createMap() {
             color: "black",
             weight: 0,
             radius: deathMarkerSize(numDeaths)
-        }).bindPopup(`<h1> ${coordinates}</h1><br>
-        <h1> Number of Deaths: ${numDeaths}</h1>`)
+        }).bindPopup(L.popup({maxWidth:150, maxHeight: 300}).setContent(`<h1> ${coordinates}</h1><br>
+        <h1> Number of Deaths: ${numDeaths}</h1>`))
         .addTo(deaths))
         }
 
-        // let legend = L.control({ position: 'bottomright' });
-
-        // legend.onAdd = function () {
-        //     let div = L.DomUtil.create('div', 'info legend');
-        //     div.innerHTML = '<h3> Legend </h3>'
-        //     let info = [0,1].
-        //     labels - [];
-        //     colors = ["#800026","#BD0026"]
-        //     for (let i=0; i < happinessSampleData.length; i++) {
-        //         div.innerHTML+=`<svg class= "legstyle" style = "background: ${colors[i]}"> </svg> <p> ${info[i]} - ${info[i+1]} </p>`
-        //     }
-        //     return div;
-        // }
-        
-        // // Adding legend to the map
-        // legend.addTo(myMap);
 };
