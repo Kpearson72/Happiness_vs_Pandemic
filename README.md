@@ -1,4 +1,5 @@
-# Project 2: Happiness vs Pandemic
+# Project 2: Happiness vs Pandemic 
+#### [Deploy the Happiness vs. Pandemic APP in Heroku](https://cohappiness.herokuapp.com/) 
 
 <p align="center">
 <img src="https://i.gyazo.com/bbe4ea726d4c1901854c9f001d4dc49c.jpg" width="250" height="250"/>
