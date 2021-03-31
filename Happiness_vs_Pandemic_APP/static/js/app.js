@@ -38,7 +38,7 @@ function demographicInfo(country) {
         // empty the panel in html before appending key, value pairs
         PANEL.html("");
         Object.entries(data).forEach(([key, value]) => {
-            d3.select("#sample-metadata").append("h4").text(`${key}: ${value}`);
+            d3.select("#sample-metadata").append("h4").text(`${key}:   ${value}`);
         });
     });
 }
@@ -113,7 +113,7 @@ d3.json("/happiness_vs_covid").then((happinessDataSample) => {
             // }).bindPopup(`<h1> ${happinessDataSample[i].latitude}, ${happinessDataSample[i].longitude}</h1><br>
             // <h1> Happiness Score: ${happinessRating}</h1>`)
             // .addTo(score)
-            }).bindPopup(`<h1> </h1><br>
+            }).bindPopup(`<h1>${happinessDataSample[i].country} </h1><br>
             <h1> Happiness Score: ${happinessRating}</h1>`)
             .addTo(score)
         }
