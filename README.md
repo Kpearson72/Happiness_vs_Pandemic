@@ -21,6 +21,11 @@ https://ourworldindata.org/coronavirus-source-data
 Data World
 https://data.world/liz-friedman/covid-19-government-responses-coronanet-research-project
 
+The World Bank
+https://data.worldbank.org/indicator/SP.POP.TOTL
+
+Kaggle
+https://www.kaggle.com/paultimothymooney/latitude-and-longitude-for-every-country-and-state
 ## Links to Github Data:
 
 [data/un_govt.csv](https://github.com/Kpearson72/Happiness_vs_Pandemic/blob/0364f71e33ed2828100394c87af5b1b81d71e3ee/data/un_govt.csv)
@@ -30,6 +35,10 @@ https://data.world/liz-friedman/covid-19-government-responses-coronanet-research
 [data/world_covid_data.csv](https://github.com/Kpearson72/Happiness_vs_Pandemic/blob/0364f71e33ed2828100394c87af5b1b81d71e3ee/data/world_covid_data.csv)
 
 [data/gov_response.csv](https://github.com/Kpearson72/Happiness_vs_Pandemic/blob/a74fdc9c144068fa66067497a61e4fb087c35096/data/gov_response.csv)
+
+[data/population_by_country_2020.csv](https://github.com/Kpearson72/Happiness_vs_Pandemic/blob/main/data/population_by_country_2020.csv)
+
+[data/world_country_and_usa_states_latitude_and_longitude_values.csv](https://github.com/Kpearson72/Happiness_vs_Pandemic/blob/main/data/world_country_and_usa_states_latitude_and_longitude_values.csv)
 
 ## Project Objective:
 
